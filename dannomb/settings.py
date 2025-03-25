@@ -29,7 +29,8 @@ SECRET_KEY = 'django-insecure-pii(^phj8r7e5p%3272*42-3g!n*2te$w-t1s)z*e@d)!6i+m9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["dannonb-project.onrender.com",
+    "127.0.0.1",]
 
 
 # Application definition
