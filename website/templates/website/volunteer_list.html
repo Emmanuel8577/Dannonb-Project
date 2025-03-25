@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}Volunteers | DANNONMBI CARE FOUNDATION{% endblock %}
+
+{% block content %}
+
+
+
+
+<section
+  class="bg-success text-white text-center py-5"
+  style="
+    background-image: url('{% static 'images/image9.jpg' %}');
+    background-size: cover;
+    background-position: center;
+    height: 70vh; /* Default height for medium and larger screens */
+    position: relative; /* Ensure the container can be positioned inside the section */
+  "
+>
+  <div class="container" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); text-align: center;">
+    <h1 class="display-4 fw-bold">Meet Our Volunteers</h1>
+  </div>
+</section>
+
+
+<!-- Volunteers Section -->
+<section id="volunteers" class="py-5 bg-light">
+    <div class="container text-center">
+        <div class="row">
+            {% for volunteer in volunteers %}
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    {% if volunteer.profile_picture %}
+                    <img src="{{ volunteer.profile_picture.url }}" class="card-img-top" alt="{{ volunteer.name }}">
+                    {% else %}
+                    <img src="{% static 'images/default-profile.jpg' %}" class="card-img-top" alt="Default Image">
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{ volunteer.name }}</h5>
+                        <p class="card-text">{{ volunteer.info }}</p>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <div class="col-12">
+                <p class="text-center text-muted">No volunteers available at the moment.</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

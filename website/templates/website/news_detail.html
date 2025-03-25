@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}{{ news.title }} | DANNONMBI CARE FOUNDATION{% endblock %}
+
+{% block content %}
+<section id="news-detail" class="py-5">
+    <div class="container">
+        <h1 class="mb-2">{{ news.title }}</h1>
+        <p class="text-muted">{{ news.published_date }}</p>
+        <img src="{{ news.image.url }}" class="img-fluid mb-4" alt="{{ news.title }}">
+        <p>{{ news.content }}</p>
+        <a href="{% url 'news_list' %}" class="btn btn-success">Back to News</a>
+    </div>
+</section>
+{% endblock %}

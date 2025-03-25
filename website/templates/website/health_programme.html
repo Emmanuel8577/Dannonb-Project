@@ -1,0 +1,127 @@
+{% extends "base.html" %} {% load static %} {% block title %}Health Programme |
+DANNONMBI CARE FOUNDATION{% endblock %} {% block content %}
+
+<!-- Hero Section -->
+<section
+  class="bg-success text-white text-center py-5"
+  style="
+    background-image: url('{% static 'images/image7.jpg' %}');
+    background-size: cover;
+    background-position: center;
+    height: 70vh; /* Default height for medium and larger screens */
+    position: relative; /* Ensures the container can be positioned at the bottom */
+  "
+>
+  <div
+    class="container"
+    style="
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+    "
+  >
+    <h1 class="display-4 fw-bold">Health Programme</h1>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <p class="lead mt-1">
+      Nigeria, with its vast population of over 200 million people, faces
+      numerous health challenges shaped by factors such as rapid urbanization,
+      poverty, unequal healthcare distribution, and a high burden of diseases.
+      The nation's healthcare system is a mix of public and private services,
+      with a majority of the population relying on government facilities for
+      access to healthcare.
+    </p>
+
+    <div>
+      <h4 class="mt-5 h4">
+        <strong> Key Health Challenges </strong>
+      </h4>
+
+      <!--  -->
+      <li class="mt-3 h5">
+        <strong> Communicable Diseases: </strong>
+      </li>
+      <ul class="mt-3">
+        <li class="mt-3 lead">
+          Malaria remains one of the leading causes of illness and death in
+          Nigeria, particularly among children under five and pregnant women.
+        </li>
+        <li class="mt-3 lead">
+          Tuberculosis (TB) and HIV/AIDS also significantly affect the
+          population, despite ongoing awareness and treatment programs.
+        </li>
+        <li class="mt-3 lead">
+          Nigeria has made progress in reducing polio cases, but vaccination
+          coverage still faces challenges, especially in rural areas.
+        </li>
+      </ul>
+
+      <!--  -->
+
+      <!--  -->
+      <li class="mt-3 h5">
+        <strong> Maternal and Child Health: </strong>
+      </li>
+      <ul class="mt-3">
+        <li class="mt-3 lead">
+          Maternal mortality rates in Nigeria are among the highest globally,
+          primarily due to complications such as hemorrhage, sepsis, and unsafe
+          abortions.
+        </li>
+        <li class="mt-3 lead">
+          Neonatal and infant mortality rates are concerning, often linked to
+          poor access to skilled birth attendants, malnutrition, and inadequate
+          neonatal care.
+        </li>
+      </ul>
+
+      <!--  -->
+      <!--  -->
+      <li class="mt-3 h5">
+        <strong> Non-Communicable Diseases (NCDs): </strong>
+      </li>
+      <ul class="mt-3">
+        <li class="mt-3 lead">
+          Lifestyle-related diseases such as hypertension, diabetes, and obesity
+          are on the rise, particularly in urban centers, due to changing diets
+          and sedentary lifestyles.
+        </li>
+        <li class="mt-3 lead">
+          Cancer, particularly breast and cervical cancer, is another emerging
+          health concern with limited screening and treatment facilities.
+        </li>
+      </ul>
+
+      <!--  -->
+      <li class="mt-3 h5">
+        <strong> Access to Healthcare: </strong>
+      </li>
+      <ul class="mt-3">
+        <li class="mt-3 lead">
+          Access to quality healthcare services varies widely between urban and
+          rural areas, with rural regions often experiencing shortages of
+          skilled health professionals, medicines, and basic infrastructure.
+        </li>
+        <li class="mt-3 lead">
+          Health insurance coverage is low, with most Nigerians paying
+          out-of-pocket for medical services, which increases financial barriers
+          to accessing care.
+        </li>
+      </ul>
+
+      <p class="mt-5 lead">
+        While Nigeria faces significant health challenges, ongoing efforts by
+        the government, NGOs, and international partners hold promise for
+        improving healthcare delivery. Addressing gaps in access, funding, and
+        workforce development will be critical in ensuring better health
+        outcomes for all Nigerians.
+      </p>
+    </div>
+  </div>
+</section>
+{% endblock %}

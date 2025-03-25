@@ -1,0 +1,258 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Annual Grantmaking | DANNONMBI CARE FOUNDATION{% endblock %}
+
+{% block content %}
+
+
+<style>
+  /* Set tab text color to green */
+  .nav-tabs .nav-link {
+    color: green;
+    padding: 10px 20px;
+
+    
+  }
+  
+  .nav-tabs .nav-link.active {
+    color: #fff; /* Text color when active */
+    background-color: green; /* Green background for active tab */
+  }
+  
+  
+</style>
+  
+<!-- Hero Section -->
+<section class="bg-success text-white text-center py-5" style="background-image: url('{% static 'images/image12.jpg' %}'); background-size: cover; background-position: center; height: 70vh; position: relative;">
+  <div class="container" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); text-align: center;">
+    <h1 class="display-4 fw-bold">Annual Grants</h1>
+  </div>
+</section>
+
+
+<!-- About Section -->
+<section class="py-5">
+  <div class="container">
+    <p class="lead mt-1">
+      The Dannonmbi NGO Annual Grants Program is designed to empower communities and drive sustainable development across Nigeria. Through targeted funding in critical areas such as health, education, and community development, Dannonmbi works to transform lives and uplift underserved populations. These grants are awarded to innovative projects that address pressing social issues, build capacity, and foster long-term impact at both local and national levels.
+    </p>
+    <div class="row mt-5">
+      <div class="col-md-6 mb-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Main Grant</h5>
+            <p class="card-text">
+
+              <p class="mt-3 h5">
+                The Main Grant is a flagship initiative of Dannonmbi, supporting large-scale programs that align with the organization’s core focus on education and health. Open to NGOs across Nigeria, this grant enables the implementation of impactful projects that address systemic challenges such as:
+              </p>
+              <ul class="mt-3">
+                <li class="mt-3 lead">
+                  Improving access to quality healthcare.
+                </li>
+                <li class="mt-3 lead">
+                  Strengthening primary and secondary education.
+                </li>
+                <li class="mt-3 lead">
+
+                  Supporting initiatives to reduce maternal and child mortality.
+
+                </li>
+              </ul>
+
+              <p class="mt-3 h5">
+                Dannonmbi encourages proposals that prioritize sustainability, scalability, and measurable outcomes, ensuring that funded projects continue to benefit communities well beyond the grant period.
+              </p>
+            
+          </div>
+        </div>
+      </div>
+      
+
+      <div class="col-md-6 mb-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Community Funds</h5>
+            <p class="card-text">
+
+              <p class="mt-3 h5">
+                Dannonmbi’s Community Funds initiative is tailored for grassroots organizations operating in Taraba and Edo States, the founder's home regions. These funds are dedicated to addressing unique socio-economic challenges faced by communities in these areas.
+              </p>
+              <p class="mt-3 h5">
+                The Community Funds aim to:
+              </p>
+              <ul class="mt-3">
+                <li class="mt-3 lead">
+                  Support small NGOs and community-based organizations (CBOs) to implement projects in health, education, and livelihoods.
+                </li>
+
+                <li class="mt-3 lead">
+                  Address rural challenges such as access to clean water, primary healthcare, and school infrastructure.
+                </li>
+                <li class="mt-3 lead">
+
+                  Provide technical and institutional support to grassroots organizations to strengthen their operations and maximize impact.
+
+                </li>
+              </ul>
+
+              <p class="mt-3 h5">
+                Since its inception, the Community Funds have empowered countless small organizations to bring transformative change to their communities by ensuring direct, localized support.
+
+              </p>
+
+
+            
+          </div>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Tabbed Content Section -->
+<section class="bg-light py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">Eligibility & How to Apply</h2>
+    <ul class="nav nav-tabs justify-content-center" id="grantTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link active"
+          id="about-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#about"
+          type="button"
+          role="tab"
+          aria-controls="about"
+          aria-selected="true"
+        >
+          About
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="eligibility-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#eligibility"
+          type="button"
+          role="tab"
+          aria-controls="eligibility"
+          aria-selected="false"
+        >
+          Eligibility
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="apply-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#apply"
+          type="button"
+          role="tab"
+          aria-controls="apply"
+          aria-selected="false"
+        >
+          How to Apply
+        </button>
+      </li>
+    </ul>
+    <div class="tab-content mt-4">
+      <div
+        class="tab-pane fade show active"
+        id="about"
+        role="tabpanel"
+        aria-labelledby="about-tab"
+      >
+      <p class="lead mt-1">     
+          The Annual Grants Program seeks to partner with organizations that share Dannonmbi's vision for a healthier, more educated, and empowered Nigeria. Eligible applicants must demonstrate their ability to develop and execute impactful projects that improve health outcomes, enhance access to education, and address critical community needs.
+        </p>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="eligibility"
+        role="tabpanel"
+        aria-labelledby="eligibility-tab"
+      >
+
+      <p class="lead mt-1">     
+        Organizations applying for Dannonmbi grants must:
+      </p>
+      <ul class="mt-3">
+       
+        <li class="mt-3 lead">
+          Be a legally registered NGO or CBO in Nigeria.
+        </li>
+        <li class="mt-3 lead">
+          Propose innovative, well-planned initiatives that address the needs of underserved populations, particularly in health and education.
+        </li>
+        <li class="mt-3 lead">
+          Demonstrate financial accountability and sound governance practices.
+
+        </li>
+      </ul>
+      </div>
+
+      <div
+        class="tab-pane fade"
+        id="apply"
+        role="tabpanel"
+        aria-labelledby="apply-tab"
+      >
+       
+      <p class="lead mt-1">     
+        Interested organizations can apply by following these steps:
+      </p>
+      <ul class="mt-3">
+        <li class="mt-3 lead">
+          Visit the Dannonmbi NGO website and navigate to the Annual Grants section.
+
+        </li>
+        <li class="mt-3 lead">
+
+          Download and complete the grant application form.
+
+        </li>
+        <li class="mt-3 lead">
+          Submit a comprehensive project proposal, including a clear budget, timeline, and expected outcomes.
+        </li>
+        <li class="mt-3 lead">
+
+          Provide all required documentation, including proof of registration and previous project reports (if applicable).
+        </li>
+
+      </ul>
+
+      <p class="lead mt-1">     
+        All applications are reviewed by the Dannonmbi grants committee, which evaluates proposals based on feasibility, impact potential, and alignment with Dannonmbi’s strategic goals.
+      </p>
+
+       
+
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action Section -->
+<section
+  class="py-5 text-white"
+  style="
+    background-image: url('{% static 'images/image1.jpg' %}');
+    background-size: cover;
+    background-position: center;
+  "
+>
+  <div class="container text-center">
+    <h2 style="font-weight:bold">Ready to Apply?</h2>
+    <p class="lead">
+      If your organization is committed to creating lasting change in Nigeria, apply for the Dannonmbi Annual Grants today! Visit Dannonmbi’s Grants Page for detailed guidelines and to submit your proposal. Join us in building stronger, healthier, and more educated communities.
+    </p>
+    <a href="{% url 'contact' %}" class="btn btn-light btn-lg">Contact Us</a>
+  </div>
+</section>
+{% endblock %}

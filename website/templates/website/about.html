@@ -1,0 +1,577 @@
+{% extends "base.html" %} {% load static %} {% block title %}About Us |
+DANNONMBI CARE FOUNDATION{% endblock %} {% block content %}
+<!-- Custom CSS for Active Accordion Color and Border -->
+<style>
+  /* Custom styles for the active accordion button */
+  .accordion-button:not(.collapsed) {
+    background-color: #28a745; /* Light Green background */
+    color: white; /* White text color */
+    border-color: #28a745; /* Light Green border color */
+  }
+
+  /* Optional: Change the icon color when the accordion is expanded */
+  .accordion-button:not(.collapsed) .accordion-icon {
+    color: white;
+  }
+
+  /* Optional: Modify hover state for the accordion button */
+  .accordion-button:hover {
+    background-color: #218838; /* Darker green on hover */
+    color: white;
+    border-color: #218838; /* Darker green border on hover */
+  }
+  .accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.5); /* Light Green shadow */
+    border-color: #28a745; /* Light Green border color */
+  }
+</style>
+
+<section
+  class="bg-success text-white text-center py-5"
+  style="
+    background-image: url('{% static 'images/image4.jpg' %}');
+    background-size: cover;
+    background-position: center;
+    height: 70vh; /* Full screen height */
+    position: relative; /* Make sure the container is positioned relative to the section */
+  "
+>
+  <div
+    class="container"
+    style="
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+    "
+  >
+    <h1 class="display-4 fw-bold">About the Foundation</h1>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="row">
+      <!-- Left Section: Video and Text -->
+      <div class="col-md-6 mb-4">
+        <div class="ratio ratio-16x9">
+          <iframe
+            src="https://www.youtube.com/embed/example_video"
+            title="About Us Video"
+            frameborder="0"
+            allowfullscreen
+            style="border-radius: 20px"
+          ></iframe>
+        </div>
+
+        <p class="mt-3">
+          The Dannonmbi Care Foundation is the nonprofit arm of the Dannon
+          Group, committed to empowering individuals and families affected by
+          crises and natural disasters. Founded to bridge the gap between
+          immediate relief and long-term recovery, the Foundation focuses on
+          trauma recovery, resilience-building, and community development,
+          particularly in underserved communities across Nigeria.
+        </p>
+        <p class="mt-3">
+          Since its establishment, the foundation has delivered impactful
+          programmes including Annual Grants for large-scale initiatives and
+          grassroots projects, as well as Rapid Response Grants, activated
+          within 48 hours of crises to provide critical aid. These programmes
+          have directly benefited communities in regions like Kaduna and
+          Maiduguri, offering culturally sensitive and community-driven
+          intervention that have helped thousands recover, rebuild, and thrive.
+        </p>
+        <p class="mt-3">
+          By integrating funding with technical support, collaborating with
+          local partners, and maintain a commitment to transparency, the
+          Dannonmbi Care Foundation ensures sustainable and measurable outcomes.
+          Looking ahead, we aspire to expand our reach by establishing trauma
+          recovery centers, enhancing data-driven solutions, and fostering
+          stronger partnerships. We invite you to join us - whether through
+          donations, volunteering, or collaborations – as we build resilient
+          communities across Nigeria.
+        </p>
+      </div>
+
+      <!-- Right Section: Accordion -->
+      <div class="col-md-6">
+        <div class="accordion" id="aboutAccordion">
+          <!-- Mission -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingMission">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseMission"
+                aria-expanded="true"
+                aria-controls="collapseMission"
+              >
+                Mission
+              </button>
+            </h2>
+            <div
+              id="collapseMission"
+              class="accordion-collapse collapse show"
+              aria-labelledby="headingMission"
+              data-bs-parent="#aboutAccordion"
+            >
+              <div class="accordion-body">
+                Strengthening crises-affected individuals and families to heal,
+                rebuild, and thrive through care, resources, and
+                resilience-focused support.
+              </div>
+            </div>
+          </div>
+
+          <!-- Vision -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingVision">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseVision"
+                aria-expanded="false"
+                aria-controls="collapseVision"
+              >
+                Vision
+              </button>
+            </h2>
+            <div
+              id="collapseVision"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingVision"
+              data-bs-parent="#aboutAccordion"
+            >
+              <div class="accordion-body">
+                Building resilient communities where every individual and family
+                can heal, rebuild, and grow after crises.
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Goals -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingGoals">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseGoals"
+                aria-expanded="false"
+                aria-controls="collapseGoals"
+              >
+                Main Goals
+              </button>
+            </h2>
+            <div
+              id="collapseGoals"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingGoals"
+              data-bs-parent="#aboutAccordion"
+            >
+              <div class="accordion-body">
+                <p>Dannonmbi Care Foundation aims to:</p>
+                <ul>
+                  <li>
+                    Deliver trauma-informed care and essential resources to help
+                    individuals and families recover from crises and rebuild
+                    their lives.
+                  </li>
+                  <li>
+                    Provide resilience-building programmes that empower
+                    communities toward self-sufficiency, stability, and
+                    preparedness for future challenges.
+                  </li>
+                  <li>
+                    Advocate for mental health awareness, disaster readiness,
+                    and equal access to recovery resources for underserved and
+                    vulnerable populations.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Values -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingValues">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseValueAreas"
+                aria-expanded="false"
+                aria-controls="collapseValueAreas"
+              >
+                Values
+              </button>
+            </h2>
+            <div
+              id="collapseValueAreas"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingValues"
+              data-bs-parent="#aboutAccordion"
+            >
+              <div class="accordion-body">
+                <p>Dannonmbi Care Foundation Core Values:</p>
+                <ul>
+                  <li>
+                    Compassion: Centering care and empathy in everything we do.
+                  </li>
+                  <li>
+                    Integrity: Sustaining transparency, trust, and
+                    accountability.
+                  </li>
+                  <li>
+                    Empowerment: Providing tools and resources to rebuild after
+                    crises.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- How the Foundation Works -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingHowItWorks">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseHowItWorks"
+                aria-expanded="false"
+                aria-controls="collapseHowItWorks"
+              >
+                How the Foundation Works
+              </button>
+            </h2>
+            <div
+              id="collapseHowItWorks"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingHowItWorks"
+              data-bs-parent="#aboutAccordion"
+            >
+              <div class="accordion-body">
+                Dannonmbi Care Foundation works to strengthen the capacity of
+                families and individuals affected by crises and natural
+                disasters, helping them recover from trauma and rebuild their
+                lives. Through a network of local and international partners,
+                including Non-Governmental Organisations, Community-Based
+                Organisations, Government agencies, Faith-Based Organisations,
+                and Corporate Partners, we ensure that the right support is
+                provided where it can have the greatest impact. Our approach is
+                built on collaboration with diverse stakeholders, from academic
+                institutions and mental health networks to youth-led
+                organisations and volunteer groups. We work closely with local
+                community leaders and traditional rulers to ensure our
+                programmes are culturally relevant, effective, and aligned with
+                the needs of the communities we serve. The Foundation also
+                collaborates with multilateral agencies, like the United Nations
+                and other global aid organisations, boosting our efforts and
+                mobilizing broader support. These partnerships enhance our
+                capacity to respond effectively and ensure the sustainability of
+                our programmes.
+
+                <li>
+                  Collaboration: Building strong partnerships to amplify our
+                  shared purpose and reach
+                </li>
+                <li>
+                  Innovation: Developing solutions to inspire resilience and
+                  growth.
+                </li>
+              </div>
+            </div>
+          </div>
+
+          <!-- Partnership and Collaboration -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingPartnership">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapsePartnership"
+                aria-expanded="false"
+                aria-controls="collapsePartnership"
+              >
+                Partnership and Collaboration
+              </button>
+            </h2>
+            <div
+              id="collapsePartnership"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingPartnership"
+              data-bs-parent="#aboutAccordion"
+            >
+              <div class="accordion-body">
+                <p>
+                  Partnership and Collaboration are vital to fulfilling the
+                  Dannonmbi Care Foundation’s mission of building resilient
+                  communities and supporting individuals and families in
+                  recovery and resilience after crises. We believe that
+                  meaningful collaborations allow us to achieve greater impact,
+                  scale up efforts, and address complex challenges requiring
+                  multiple stakeholders' coordinated action. Through strategic
+                  partnerships, we harness collective strengths to deliver
+                  integrated, culturally relevant solutions tailored to the
+                  needs of underserved communities.
+                </p>
+                <p>
+                  At the forefront of our approach is identifying strategic
+                  needs and pursuing partners whose goals and values align with
+                  ours. Through a transparent and rigorous due diligence
+                  process, we assess compatibility and establish clear
+                  expectations to ensure successful collaboration. We then
+                  cultivate close working relationships with our partners to
+                  design and implement impactful programmes, ensuring constant
+                  communication, shared accountability, and adaptability to meet
+                  changing needs. Post-implementation evaluations enable us to
+                  reflect, learn, and refine our strategies for future
+                  initiatives.
+                </p>
+                <p>
+                  While collaborations offer immense benefits, we remain mindful
+                  of potential challenges, such as communication breakdowns,
+                  lack of commitment, and incompatibility between partners. To
+                  address these risks, we prioritise clear communication,
+                  transparency, and mutual accountability throughout the
+                  collaboration and partnership process. By doing so, we ensure
+                  that our partnerships remain productive, sustainable, and
+                  aligned with our organisation’s mission.
+                </p>
+                <p>
+                  Through these efforts, we aim to enhance the quality of our
+                  programmes, streamline operations, and expand our reach to new
+                  regions, beneficiaries, and services. Whether through joint
+                  programmes, advocacy, or resource-sharing, our partnerships
+                  strengthen our ability to create lasting change in the lives
+                  of those we serve.
+                </p>
+                <li><strong> Resource Partners: </strong></li>
+                <p>
+                  These partners include individuals, organisations, or
+                  institutions that contribute financial or material resources
+                  to support our programmes. They play a vital role in enabling
+                  us to deliver trauma-informed care, resilience-building
+                  initiatives, and community development projects. Their
+                  contributions not only strengthen our operational capacity but
+                  also allow us to respond swiftly and effectively during
+                  emergencies. Resource partnerships often involve corporate
+                  sponsorships, philanthropic contributions, and in-kind
+                  donations such as equipment or essential supplies, ensuring we
+                  can address both immediate and long-term community needs.
+                </p>
+                <li><strong> Advocacy and Network Partners: </strong></li>
+                <p>
+                  Advocacy and Network partners help advance our mission by
+                  promoting shared objectives, raising awareness, and driving
+                  policy change. These partnerships include coalitions,
+                  alliances, and networks at local, national, and global levels.
+                  Together, we co-develop campaigns, participate in advocacy
+                  events, and influence decision-makers to prioritise issues
+                  like trauma recovery, mental health, and community resilience.
+                  Partnerships with global aid organisations and regional
+                  alliances have also mobilized collective action to address
+                  systematic challenges.
+                </p>
+                <li><strong> Implementation Partners: </strong></li>
+                <p>
+                  We work alongside grassroots organisations, NGOs, and CBOs to
+                  implement programmes effectively in underserved communities.
+                  These partners provide local expertise, ensuring that our
+                  interventions are contextually relevant and impactful. Beyond
+                  delivering programmes, implementation partners help foster
+                  trust within communities and promote sustained engagement. For
+                  example, they facilitate training programmes, deliver mental
+                  health services, or organise resilience-building workshops
+                  that directly benefit the target populations. Additionally, we
+                  support these partners with technical assistance and
+                  capacity-building efforts to enhance their effectiveness and
+                  scalability.
+                </p>
+                <li><strong> Learning and Innovation Partners: </strong></li>
+                <p>
+                  Our Learning and Innovation partnerships encourage mutual
+                  growth, continuous improvement, and the adoption of innovative
+                  solutions. By collaborating with academic institutions,
+                  research organisations, and other thought leaders, we remain
+                  at the forefront of emerging best practices in trauma
+                  recovery, resilience-building, and community development.
+                  These partnerships often involve joint research projects,
+                  knowledge-sharing forums, and the creation of new tools or
+                  methodologies. As an example, working with universities and
+                  research centers allows us to analyse programme outcomes,
+                  refine intervention models, and ensure evidence-based
+                  decision-making.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Grantmaking -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingGrantmaking">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseGrantmaking"
+                aria-expanded="false"
+                aria-controls="collapseGrantmaking"
+              >
+                Grantmaking
+              </button>
+            </h2>
+            <div
+              id="collapseGrantmaking"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingGrantmaking"
+              data-bs-parent="#aboutAccordion"
+            >
+              <div class="accordion-body">
+                <p>
+                  At Dannonmbi Care Foundation, we focus on providing
+                  trauma-informed care, developing resilience-building
+                  programmes, and advocating for policy changes that better
+                  prepare communities for future crises. By continuously
+                  learning from our projects and refining our strategies, we
+                  remain committed to creating lasting impact, supporting
+                  communities on their journey towards self-sufficiency, and
+                  addressing their unique challenges.
+                </p>
+                <p>
+                  At Dannonmbi Care Foundation, grant-making is more than
+                  funding—it’s a pathway to empowering communities, fostering
+                  resilience, and driving sustainable recovery. Aligned with our
+                  mission to create thriving communities, our approach
+                  emphasizes transparency, accountability, collaboration, and
+                  adaptability while addressing both urgent and long-term needs
+                  across trauma recovery, resilience-building, and community
+                  development.
+                </p>
+                <p>
+                  Our grant-making process is categorized into two key areas:
+                  Annual Grants and Rapid Response Grants.
+                </p>
+
+                <li><strong> Annual Grants:</strong></li>
+
+                <p>
+                  Annual Grants form the backbone of our funding efforts,
+                  enabling impactful, sustainable projects across Nigeria. Each
+                  year, we publish a Call for Concept Notes, inviting eligible
+                  organisations to submit proposals. Our process is rigorous,
+                  transparent, and inclusive, involving eligibility screening,
+                  proposal assessment, and board-level reviews. Feedback is
+                  provided to promote trust, learning, and continuous
+                  improvement. Annual Grants are further divided into Main
+                  Grants and Community Support Funds.
+                </p>
+
+                <li><strong> Main Grants: </strong></li>
+                <p>
+                  These large-scale grants are available to Non-Governmental
+                  Organisations (NGOs) and Community-Based Organisations (CBOs)
+                  nationwide. They focus on initiatives such as trauma recovery,
+                  mental health support, and resilience-building programmes.
+                  Applications are evaluated for alignment with our mission,
+                  feasibility, and potential for sustainable impact. A
+                  structured timeline ensures decisions are finalized within six
+                  months of submission, promoting clarity and efficiency.
+                </p>
+                <li><strong> Community Support Funds: </strong></li>
+                <p>
+                  Tailored for grassroots organisations, particularly in Kaduna
+                  and Maiduguri—our priority states—these smaller grants address
+                  culturally relevant, locally driven projects. Beyond financial
+                  support, we provide technical and institutional assistance to
+                  enhance capacity and foster community engagement. These grants
+                  aim to build long-term self-sufficiency while addressing
+                  immediate needs.
+                </p>
+                <li><strong> Rapid Response Grants: </strong></li>
+
+                <p>
+                  During crises, our Rapid Response Grants enable swift
+                  humanitarian relief, activated within 48 hours of an
+                  emergency. These grants address urgent needs such as mental
+                  health care, emergency supplies, and temporary shelter while
+                  laying the groundwork for long-term recovery.
+                </p>
+                <p>
+                  We collaborate closely with local leaders, NGOs, and
+                  multilateral organisations to ensure effective and accountable
+                  delivery. Guided by data analysis and risk assessments, our
+                  responses are targeted, efficient, and adaptable. Post-crisis
+                  reflections allow us to assess strengths, address weaknesses,
+                  and improve future protocols. Interventions are implemented
+                  within 30 days, with continuous evaluations informing future
+                  actions.
+                </p>
+
+                <p>
+                  At every stage, we prioritise transparency, accountability,
+                  and learning. Feedback mechanisms, data reviews, and regular
+                  assessments refine our strategies, ensuring every project
+                  achieves measurable, lasting results. By embedding these
+                  principles into all our grant schemes, we empower communities
+                  to heal, rebuild, and thrive for generations to come.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Focus Areas -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFocusAreas">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseFocusAreas"
+                aria-expanded="false"
+                aria-controls="collapseFocusAreas"
+              >
+                Focus Areas
+              </button>
+            </h2>
+            <div
+              id="collapseFocusAreas"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingFocusAreas"
+              data-bs-parent="#aboutAccordion"
+            >
+              <div class="accordion-body">
+                <ul>
+                  <li>
+                    Trauma Recovery and Mental Health Support
+                  </li>
+                  <li>
+                    Empowerment and Resilience Building
+                  </li>
+                  <li>
+                    Community Collaboration and Advocacy
+                  </li>
+                  <li>
+                    Resource Provision and Humanitarian Support
+                  </li>
+                  <li>
+                    Innovation and Sustainability
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

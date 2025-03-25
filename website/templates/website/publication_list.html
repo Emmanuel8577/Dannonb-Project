@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block title %}Publications | DANNONMBI CARE FOUNDATION{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section with Background Image from Static Files -->
+<section
+  class="bg-success text-white text-center py-5"
+  style="background-image: url('{% static 'images/image2.jpg' %}'); background-size: cover; background-position: center; height: 70vh; position: relative;">
+  <div class="container" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); text-align: center;">
+    <h1 class="display-4 fw-bold">Publications</h1>
+  </div>
+</section>
+
+
+<section id="publications-list" class="py-5 bg-light">
+    <div class="container">
+
+        <div class="row">
+            {% for publication in page_obj %}
+            <div class="col-md-4 mb-4 d-flex align-items-stretch">
+                <div class="card shadow-sm w-100">
+                    <img src="{{ publication.cover_image.url }}" class="card-img-top" alt="{{ publication.title }}" style="object-fit: cover; height: 200px;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">{{ publication.title }}</h5>
+                        <p class="card-text text-muted">Published on: {{ publication.date|date:"F j, Y" }}</p>
+                        <div class="mt-auto">
+                            <a href="{{ publication.file.url }}" class="btn btn-success w-100" target="_blank">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Pagination -->
+        <div class="d-flex justify-content-center mt-4">
+            <nav aria-label="Publications Pagination">
+                <ul class="pagination">
+                    {% if page_obj.has_previous %}
+                    <li class="page-item">
+                        <a class="page-link bg-light text-success border-success" href="?page={{ page_obj.previous_page_number }}#publications-list" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    {% endif %}
+
+                    {% for num in page_obj.paginator.page_range %}
+                    <li class="page-item {% if page_obj.number == num %}active{% endif %}">
+                        <a class="page-link 
+                        {% if page_obj.number == num %}bg-success text-white border-success{% else %}bg-light text-success border-success{% endif %}" 
+                        href="?page={{ num }}#publications-list">{{ num }}</a>
+                    </li>
+                    {% endfor %}
+
+                    {% if page_obj.has_next %}
+                    <li class="page-item">
+                        <a class="page-link bg-light text-success border-success" href="?page={{ page_obj.next_page_number }}#publications-list" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+{% endblock %}

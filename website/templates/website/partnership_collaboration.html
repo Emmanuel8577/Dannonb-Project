@@ -1,0 +1,283 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Partnership & Collaboration | DANNONMBI CARE FOUNDATION{% endblock %}
+
+{% block content %}
+
+<style>
+  /* Custom styles for the active accordion button */
+  .accordion-button:not(.collapsed) {
+    background-color: #28a745; /* Light Green background */
+    color: white; /* White text color */
+    border-color: #28a745; /* Light Green border color */
+  }
+
+  /* Optional: Change the icon color when the accordion is expanded */
+  .accordion-button:not(.collapsed) .accordion-icon {
+    color: white;
+  }
+
+  /* Optional: Modify hover state for the accordion button */
+  .accordion-button:hover {
+    background-color: #218838; /* Darker green on hover */
+    color: white;
+    border-color: #218838; /* Darker green border on hover */
+  }
+
+  .accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.5); /* Light Green shadow */
+    border-color: #28a745; /* Light Green border color */
+  }
+</style>
+
+<section class="bg-success text-white text-center py-5" style="background-image: url('{% static 'images/image14.jpg' %}'); background-size: cover; background-position: center; height: 70vh; position: relative;">
+  <div class="container" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); text-align: center;">
+    <h1 class="display-4 fw-bold">Partnership & Collaboration</h1>
+  </div>
+</section>
+
+
+<!-- Main Content -->
+<div class="container py-5">
+
+  <!-- Grid Layout for Content -->
+  <div class="row">
+    <div class="col-md-8">
+      <b style= "font-size: 26px">Partner With Dannonmbi Foundation</b>
+      <p class="lead mt-3">
+        At Dannonmbi Foundation, we believe in the power of collaboration to create lasting change in communities across Nigeria. Our partnership programs are designed to unite organizations, corporations, and individuals who share our passion for health, education, and humanitarian interventions. Together, we can amplify our impact and make a meaningful difference where it matters most.
+      </p>
+
+
+      <h3 class="mt-4">Why Partner With Us?</h3>
+      <li class="mt-3 lead">Shared Vision
+      </li>
+      <p class="lead">
+        We align with partners who are committed to improving lives and fostering sustainable development in underserved communities.
+      </p>
+
+
+      <li class="mt-4 lead">Mutual Growth
+      </li>
+
+      <p class="lead ">
+        Our partnerships are built on trust, transparency, and the pursuit of shared goals. By working together, we create opportunities for mutual growth and lasting impact.
+      </p>
+
+      <li class="mt-4 lead">Proven Impact
+      </li>
+
+      <p class="lead mb-5">
+        With years of experience and a history of successful projects, the Dannonmbi Foundation is a trusted partner in delivering measurable results for communities in need.
+      </p>
+
+
+    </div>
+
+    <!-- Accordion Section -->
+    <div class="col-md-4">
+      <h4>Partnership Opportunities</h4>
+      
+      <!-- Custom Green Accordion -->
+      <div class="accordion mt-4" id="partnershipCategories">
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button custom-accordion-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Corporate Partnerships
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#partnershipCategories">
+            <div class="accordion-body">
+              Collaborate with us to fund large-scale projects or contribute to ongoing initiatives in health and education. Showcase your corporate social responsibility (CSR) by making a tangible difference.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button custom-accordion-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              NGO Collaborations
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#partnershipCategories">
+            <div class="accordion-body">
+              Join forces with us to deliver innovative programs and expand our reach to underserved areas. Together, we can enhance impact and efficiency.
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button custom-accordion-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Individual Donors and Philanthropists
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#partnershipCategories">
+            <div class="accordion-body">
+              Make a personal commitment to change lives by supporting our programs. Your contribution can provide immediate relief or long-term support for vital community projects.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button custom-accordion-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              Community Engagement
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#partnershipCategories">
+            <div class="accordion-body">
+              Work with us to co-create projects that address specific challenges faced by your community. Your local insights and our resources can transform lives.
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+  <section class="py-5">
+    <div class="container">
+
+      <h3>Benefits of Partnering</h3>
+      <ul class="mt-3">
+        <li class="mt-3 lead">
+          Enhanced Visibility: Gain recognition for your contribution to social good.
+        </li>
+        <li class="mt-3 lead">
+          Measurable Impact: Receive detailed reports on the outcomes of the projects you support.
+        </li>
+        <li class="mt-3 lead">
+          Strengthened Communities: Together, we create healthier, better-educated, and more resilient communities.
+        </li>
+      </ul>
+
+
+    </div>
+  </section>
+
+
+
+  <!-- Form Section -->
+  <div class="mt-5">
+    <h3 class="text-center mb-5">Fill Out the Partnership Form</h3>
+    
+
+    <!-- Form container -->
+    <div class="form-container">
+
+      <form method="post">
+        {% csrf_token %}
+
+        <!-- First Name -->
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="id_first_name" class="form-label">First Name</label>
+            <input type="text" name="first_name" value="{{ form.first_name.value|default:'' }}" class="form-control" autocomplete="off">
+            {% if form.first_name.errors %}
+              <div class="text-danger">
+                {% for error in form.first_name.errors %}
+                  <p>{{ error }}</p>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+
+          <!-- Last Name -->
+          <div class="col-md-6">
+            <label for="id_last_name" class="form-label">Last Name</label>
+            <input type="text" name="last_name" value="{{ form.last_name.value|default:'' }}" class="form-control" autocomplete="off">
+            {% if form.last_name.errors %}
+              <div class="text-danger">
+                {% for error in form.last_name.errors %}
+                  <p>{{ error }}</p>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="mb-3">
+          <label for="id_email" class="form-label">Email Address</label>
+          <input type="email" name="email" value="{{ form.email.value|default:'' }}" class="form-control" autocomplete="off">
+          {% if form.email.errors %}
+            <div class="text-danger">
+              {% for error in form.email.errors %}
+                <p>{{ error }}</p>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+
+        <!-- Phone Number -->
+        <div class="mb-3">
+          <label for="id_phone_number" class="form-label">Phone Number</label>
+          <input type="text" name="phone_number" value="{{ form.phone_number.value|default:'' }}" class="form-control" autocomplete="off">
+          {% if form.phone_number.errors %}
+            <div class="text-danger">
+              {% for error in form.phone_number.errors %}
+                <p>{{ error }}</p>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+
+        <!-- Organisation -->
+        <div class="mb-3">
+          <label for="id_organisation" class="form-label">Your Organisation (Optional)</label>
+          <input type="text" name="organisation" value="{{ form.organisation.value|default:'' }}" class="form-control" autocomplete="off">
+          {% if form.organisation.errors %}
+            <div class="text-danger">
+              {% for error in form.organisation.errors %}
+                <p>{{ error }}</p>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+
+        <!-- Partnership Category -->
+        <div class="mb-3">
+          <label for="id_partnership_category" class="form-label">Partnership Category</label>
+          <select name="partnership_category" class="form-control">
+            <option value="Corporate Partnerships" {% if form.partnership_category.value == "Corporate Partnerships" %}selected{% endif %}>Corporate Partnerships</option>
+            <option value="NGO Collaborations" {% if form.partnership_category.value == "NGO Collaborations" %}selected{% endif %}>NGO Collaborations</option>
+            <option value="Individual Donors and Philanthropists" {% if form.partnership_category.value == "Individual Donors and Philanthropists" %}selected{% endif %}>Individual Donors and Philanthropists</option>
+            <option value="Community Engagement" {% if form.partnership_category.value == "Community Engagement" %}selected{% endif %}>Community Engagement</option>
+
+          </select>
+          {% if form.partnership_category.errors %}
+            <div class="text-danger">
+              {% for error in form.partnership_category.errors %}
+                <p>{{ error }}</p>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+
+        <div class="mb-3">
+          <label for="id_message" class="form-label">Message</label>
+          <textarea name="message" rows="4" placeholder="How do you want to support us?" class="form-control">{{ form.message.value|default:'' }}</textarea>
+          {% if form.message.errors %}
+            <div class="text-danger">
+              {% for error in form.message.errors %}
+                <p>{{ error }}</p>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+
+        <button type="submit" class="btn btn-success w-100 mt-4">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

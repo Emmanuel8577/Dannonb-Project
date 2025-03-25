@@ -1,0 +1,164 @@
+{% extends "base.html" %} {% load static %} {% block title %}Discretionary Grant
+| DANNONMBI CARE FOUNDATION{% endblock %} {% block content %}
+<!-- Hero Section -->
+<section
+  class="bg-success text-white text-center py-5"
+  style="
+    background-image: url('{% static 'images/image13.jpg' %}');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    position: relative;
+  "
+>
+  <div
+    class="container"
+    style="
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+    "
+  >
+    <h1 class="display-4 fw-bold">Discretionary Grant</h1>
+  </div>
+</section>
+
+<!-- About the Grant -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4 " style=font-weight:bold>About the Discretionary Grant</h2>
+
+    <p class="lead mt-1">
+      The Dannonmbi Foundation’s Discretionary Grant program is designed to
+      provide swift responses to urgent humanitarian needs across Nigeria. This
+      grant supports interventions in education and health that emerge between
+      regular funding cycles, ensuring rapid and impactful assistance in moments
+      of crisis or unforeseen challenges. The Foundation remains committed to
+      empowering vulnerable communities through targeted and measurable
+      short-term projects.
+    </p>
+  </div>
+</section>
+
+<!-- How It Works -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">How It Works</h2>
+    <div class="row text-center">
+      <div class="col-md-4 mb-4">
+        <div class="p-4 shadow rounded">
+          <h3 class="text-success">Step 1</h3>
+          <h4 class="h4">Identify Community Needs</h4>
+
+          <p class="mt-1">
+            Organizations or groups can pinpoint pressing challenges that align
+            with the Foundation’s focus on health and education. Clear
+            documentation of the problem and proposed solutions are crucial at
+            this stage.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="p-4 shadow rounded">
+          <h3 class="text-success">Step 2</h3>
+          <h4 class="h4">Submit an Application</h4>
+
+          <p class="mt-1">
+            Eligible organizations can submit a concise application outlining
+            the proposed project, expected outcomes, and the anticipated impact
+            on the target community. The application must align with the
+            Discretionary Grant’s requirements and funding limits.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="p-4 shadow rounded">
+          <h3 class="text-success">Step 3</h3>
+          <h4 class="h4">Evaluation and Approval</h4>
+
+          <p class="mt-1">
+            The Foundation reviews applications to assess feasibility,
+            cost-effectiveness, and community impact. Approved projects are then
+            funded promptly to ensure timely intervention and support.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Eligibility -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Eligibility</h2>
+    <p class="mb-4 lead">
+      To qualify for a Discretionary Grant, projects must:
+    </p>
+   
+    <ul >
+    
+      <li class="lead mb-2">
+        Address health or educational challenges within Nigerian communities.
+
+      </li>
+      <li class="lead mb-2">
+        Demonstrate urgency or short-term impact that cannot wait for annual grants.
+      </li>
+      <li class="lead mb-2">
+        Clearly identify the problem, propose actionable solutions, and outline the target beneficiaries.
+      </li>
+      <li class="lead mb-2">
+        Require a budget between 1 million and 5 million Naira.
+      </li>
+      <li class="lead mb-2">
+        Promote the Foundation’s vision of uplifting underserved communities.
+      </li>
+    </ul>
+  </div>
+</section>
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">What Beneficiaries Say</h2>
+    {% if testimonials.exists %}
+      <div class="row">
+        {% for testimonial in testimonials %}
+          <div class="col-md-6">
+            <div class="card shadow-sm mb-4">
+              <div class="card-body">
+                <blockquote class="blockquote">
+                  <p>{{ testimonial.text }}</p>
+                  <footer class="blockquote-footer">{{ testimonial.author }}</footer>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="text-center">No testimonials available at the moment. Check back later!</p>
+    {% endif %}
+  </div>
+</section>
+
+
+<section
+  class="py-5 text-white"
+  style="
+    background-image: url('{% static 'images/image7.jpg' %}');
+    background-size: cover;
+    background-position: center;
+  "
+>
+  <div class="container text-center">
+    <h2>Ready to Apply?</h2>
+    <p class="lead">
+      If you meet the eligibility criteria and have a project that aligns with the Dannonmbi Foundation’s mission, we encourage you to apply today! Visit our application portal or contact us for more information on how to get started.
+    </p>
+    <a href="{% url 'contact' %}" class="btn btn-light btn-lg">Contact Us</a>
+  </div>
+</section>
+{% endblock %}

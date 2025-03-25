@@ -1,0 +1,227 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}DANNONMBI CARE FOUNDATION{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Animate.css -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+
+    <link href="{% static 'css/custom.css' %}" rel="stylesheet">
+
+    <style>
+        /* Top Bar Styling */
+        .top-bar {
+            background-color: #28a745;
+            padding: 0.5rem 0;
+            font-size: 0.9rem;
+            height: 50px
+        }
+        .top-bar a {
+            color: white;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        
+
+        
+        
+    </style>
+    
+</head>
+<body>
+
+    <div class="top-bar d-flex flex-wrap justify-content-between align-items-center px-2 py-2">
+        <div class="d-flex flex-wrap">
+            <a href="mailto:help@dannonmbi.com.ng" class="me-3 mb-2 mb-md-0"><i class="fas fa-envelope"></i> help@dannonmbi.com.ng</a>
+            <a href="tel:+1234567890" class="me-3"><i class="fas fa-phone"></i> (+123) 456 7890</a>
+        </div>
+        <div class="d-flex flex-wrap d-none d-md-flex">
+            <a href="#" class="me-3 mb-2 mb-md-0"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="me-3 mb-2 mb-md-0"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="me-3 mb-2 mb-md-0"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+
+    
+    
+    
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarNav">
+
+                <a class="" href="/">
+                    <img src="{% static 'images/logo.png' %}"  style="max-height: 40px" alt="Foundation Logo">
+                </a>
+                
+                <ul class="navbar-nav ms-auto me-3">
+                    <!-- WHO WE ARE Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="whoWeAreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            WHO WE ARE
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="whoWeAreDropdown">
+                            <li><a class="dropdown-item" href="{% url 'about' %}">ABOUT THE FOUNDATION</a></li>
+                            <li><a class="dropdown-item" href="{% url 'board_of_trustees' %}">BOARD OF TRUSTEES</a></li>
+                            <li><a class="dropdown-item" href="{% url 'team' %}">OUR TEAM</a></li>
+                            <li><a class="dropdown-item" href="{% url 'volunteer_list' %}">VOLUNTEERS</a></li>
+                        </ul>
+                    </li>
+                
+                    <!-- PROGRAMMES Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="programmesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            PROGRAMMES
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="programmesDropdown">
+                            <li><a class="dropdown-item" href="{% url 'health_programme' %}">HEALTH</a></li>
+                            <li><a class="dropdown-item" href="{% url 'emergency_relief' %}">EMERGENCY RELIEF</a></li>
+                            <li><a class="dropdown-item" href="{% url 'education_programme' %}">EDUCATION</a></li>
+                            <li><a class="dropdown-item" href="{% url 'skills_development' %}">SKILLS DEVELOPMENT</a></li>
+                            <li><a class="dropdown-item" href="{% url 'advocacy_awareness' %}">ADVOCACY AWARENESS</a></li>
+                        </ul>
+                    </li>
+                    <!-- GRANTMAKING Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="grantMakingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            GRANTMAKING
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="grantMakingDropdown">
+                            <li><a class="dropdown-item" href="{% url 'annual_grant' %}">ANNUAL GRANTS</a></li>
+                            <li><a class="dropdown-item" href="{% url 'discretionary_grant' %}">DISCRETIONARY GRANTS </a></li>
+                            <li><a class="dropdown-item" href="{% url 'partnership_collaboration' %}">PARTNERSHIPS</a></li>
+                        </ul>
+                    </li>
+                
+                    <!-- EVENTS -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'event_list' %}">EVENTS</a>
+                    </li>
+                
+                    <!-- SCHOLARSHIP -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'scholarship' %}">SCHOLARSHIP</a>
+                    </li>
+                
+                    <!-- MEDIA CENTER Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="mediaCenterDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            MEDIA CENTER
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="mediaCenterDropdown">
+                            <li><a class="dropdown-item" href="{% url 'news_list' %}">LATEST NEWS</a></li>
+                            <li><a class="dropdown-item" href="{% url 'publication_list' %}">PUBLICATIONS</a></li>
+                            <li><a class="dropdown-item" href="{% url 'video_list' %}">VIDEOS</a></li>
+                        </ul>
+                    </li>
+                
+                    <!-- CONTACT US -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact' %}">CONTACT US</a>
+                    </li>
+                </ul>
+                
+                <!-- Search Form -->
+                {% comment %} <form class="d-flex search-mobile me-3">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit">Search</button>
+                </form> {% endcomment %}
+                <!-- Call to Action -->
+
+
+                <a href="{% url 'donate' %}" class="btn btn-primary donate-btn">DONATE</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+
+    <!-- Footer -->
+<footer class="text-white py-5" style="background-color: #155724;">
+  <div class="container">
+      <div class="row">
+          <!-- About Section -->
+          <div class="col-md-4 mb-4">
+              <h5>About Us</h5>
+              <p class="small">
+                  Dannonmbi Care Foundation is dedicated to making a difference through impactful programs in health, education, and advocacy.
+              </p>
+              <a href="{% url 'about' %}" class="text-white text-decoration-none">Learn More</a>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-md-4 mb-4">
+              <h5>Quick Links</h5>
+              <ul class="list-unstyled">
+                  <li><a href="{% url 'health_programme' %}" class="text-white text-decoration-none">Health Programmes</a></li>
+                  <li><a href="{% url 'team' %}" class="text-white text-decoration-none">Our Team</a></li>
+                  <li><a href="{% url 'event_list' %}" class="text-white text-decoration-none">Events</a></li>
+                  <li><a href="{% url 'contact' %}" class="text-white text-decoration-none">Contact Us</a></li>
+              </ul>
+          </div>
+
+          <!-- Contact Section -->
+          <div class="col-md-4 mb-4">
+              <h5>Contact</h5>
+              <ul class="list-unstyled small">
+                  <li><i class="fas fa-map-marker-alt me-2"></i> No 1, MURTALA CRESCENT CLOSE, II NEW EXTENSION, KADUNA, KADUNA STATE</li>
+                  <li><i class="fas fa-phone-alt me-2"></i> +123 456 7890</li>
+                  <li><i class="fas fa-envelope me-2"></i> info@dannonmbicare.org</li>
+              </ul>
+              <div>
+                  <!-- Social Media Links -->
+                  <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                  <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                  <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+          </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="text-center pt-4 border-top border-white">
+          <p class="small mb-0">&copy; 2024 Dannonmbi Care Foundation. All Rights Reserved.</p>
+      </div>
+  </div>
+</footer>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const navbar = document.querySelector('.navbar');
+    const logo = document.querySelector('.logo-section img');
+
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+            logo.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+            logo.classList.remove('scrolled');
+        }
+    });
+});
+
+   
+</script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Board of Trustees | DANNONMBI CARE FOUNDATION{% endblock %}
+
+{% block content %}
+<!-- Hero Section with Background Image from Static Files -->
+<section
+  class="bg-success text-white text-center py-5"
+  style="
+    background-image: url('{% static 'images/image4.jpg' %}');
+    background-size: cover;
+    background-position: center;
+    height: 70vh; /* Default height for medium and larger screens */
+    position: relative; /* Ensure the container can be positioned inside the section */
+  "
+>
+  <div class="container" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); text-align: center;">
+    <h1 class="display-4 fw-bold " style="font-size: 80px">Board of Trustees</h1>
+  </div>
+</section>
+
+<!-- Inline CSS for Styling -->
+<style>
+    .custom-card {
+        height: 100%; /* Stretch cards to be the same height */
+        display: flex;
+        border: 1px solid #d3d3d3;
+        flex-direction: column;
+        border-radius: 0; /* Remove border radius */
+        box-shadow: none; /* Remove shadow for flat design */
+    }
+
+    .card-image {
+        height: 200px; /* Fixed height for the image section */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f8f9fa; /* Neutral background for icons */
+    }
+
+    .card-image img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover; /* Ensure image fits without distortion */
+    }
+
+    .no-image {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #6c757d; /* Subtle icon color */
+        font-size: 3rem; /* Icon size */
+    }
+
+    .card-body {
+        flex-grow: 1; /* Allow body to stretch */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end; /* Ensure consistent alignment */
+    }
+
+    .row-spacing {
+        margin-bottom: 30px; /* Space between rows */
+    }
+</style>
+
+<!-- Content -->
+<div class="container mt-5">
+    <div class="row row-spacing">
+        {% for trustee in trustees %}
+            <div class="col-md-3">
+                <a href="{% url 'trustee_detail' trustee.pk %}" class="text-decoration-none">
+                    <div class="card mb-4 text-center custom-card">
+                        <div class="card-image">
+                            {% if trustee.picture %}
+                                <img
+                                    src="{{ trustee.picture.url }}"
+                                    alt="{{ trustee.name }}"
+                                >
+                            {% else %}
+                                <div class="no-image">
+                                    <i class="fas fa-user avatar-icon"></i>
+                                </div>
+                            {% endif %}
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ trustee.name }}</h5>
+                            {% if trustee.position %}
+                                <p class="card-text">{{ trustee.position }}</p>
+                            {% else %}
+                                <p class="card-text">No position available.</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            {% if forloop.counter|divisibleby:4 and not forloop.last %}
+                </div><div class="row row-spacing">
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

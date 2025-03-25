@@ -1,0 +1,182 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Scholarships | DANNONMBI CARE FOUNDATION{% endblock %}
+
+{% block content %}
+<!-- Hero Section with Background Image from Static Files -->
+<section
+  class="bg-success text-white text-center py-5"
+  style="background-image: url('{% static 'images/image16.jpg' %}'); background-size: cover; background-position: center; height: 70vh; position: relative;">
+  <div class="container" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); text-align: center;">
+    <h1 class="display-4 fw-bold">Scholarships</h1>
+    <p class="lead">Empowering the future through education and opportunity</p>
+  </div>
+</section>
+
+
+<!-- Introduction Section -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Welcome to Dannonmbi Care Foundation Scholarships</h2>
+    <p class="lead text-center mb-4">Our scholarships are designed to support deserving students who demonstrate exceptional promise in their academic pursuits. Explore the opportunities and apply today to unlock your future!</p>
+  </div>
+</section>
+
+<!-- Available Scholarships Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h3 class="text-center mb-4">Available Scholarships</h3>
+    <div class="row">
+      <!-- Card 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-lg h-100">
+          <img src="{% static 'images/image1.jpg' %}" class="card-img-top" alt="Undergraduate Scholarship">
+          <div class="card-body">
+            <h5 class="card-title">Undergraduate Scholarship</h5>
+            <p class="card-text">A scholarship for exceptional students entering their first year of university. Open to all disciplines.</p>
+            <a href="#apply" class="btn btn-success">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-lg h-100">
+          <img src="{% static 'images/image3.jpg' %}" class="card-img-top" alt="Graduate Scholarship">
+          <div class="card-body">
+            <h5 class="card-title">Graduate Scholarship</h5>
+            <p class="card-text">For graduate students aiming to further their education in specialized fields. Research and academic-focused programs.</p>
+            <a href="#apply" class="btn btn-success">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-lg h-100">
+          <img src="{% static 'images/image2.jpg' %}" class="card-img-top" alt="Research Grant">
+          <div class="card-body">
+            <h5 class="card-title">Research Grant</h5>
+            <p class="card-text">A grant for students undertaking significant research in any academic field. Supports groundbreaking discoveries.</p>
+            <a href="#apply" class="btn btn-success">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Eligibility Criteria Section -->
+<section class="py-5">
+  <div class="container">
+    <h3 class="text-center mb-4">Eligibility Criteria</h3>
+    <div class="row">
+      <div class="col-md-6">
+        <h5>General Requirements</h5>
+        <ul>
+          <li>Must be a full-time student enrolled in a recognized institution</li>
+          <li>Minimum GPA of 3.5 on a 4.0 scale</li>
+          <li>Must demonstrate financial need</li>
+          <li>Submit an official transcript and two letters of recommendation</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <h5>Additional Requirements</h5>
+        <ul>
+          <li>Active involvement in extracurricular activities</li>
+          <li>Demonstrated leadership potential</li>
+          <li>Submission of a personal essay on future academic and career goals</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How to Apply Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h3 class="text-center mb-4">How to Apply</h3>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card shadow-lg mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Step 1: Complete the Application Form</h5>
+            <p class="card-text">Download the application form, fill it out completely, and submit it online or by email.</p>
+          </div>
+        </div>
+        <div class="card shadow-lg mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Step 2: Gather Documents</h5>
+            <p class="card-text">Submit your academic records, recommendation letters, and any other required documents.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card shadow-lg mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Step 3: Interview</h5>
+            <p class="card-text">Shortlisted candidates will be invited for an interview. The final decision will be based on merit.</p>
+          </div>
+        </div>
+        <div class="card shadow-lg mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Step 4: Receive Scholarship</h5>
+            <p class="card-text">Successful candidates will be notified and awarded the scholarship to fund their studies.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="py-5">
+  <div class="container">
+    <h3 class="text-center mb-4">Scholarship Benefits</h3>
+    <div class="row">
+      <div class="col-md-6">
+        <ul>
+          <li>Full or partial tuition coverage</li>
+          <li>Access to exclusive mentorship programs with top professionals</li>
+          <li>Networking opportunities with industry leaders and experts</li>
+          <li>Opportunities to attend workshops, conferences, and seminars</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <ul>
+          <li>Access to cutting-edge research facilities</li>
+          <li>Priority consideration for paid internships</li>
+          <li>Personalized career coaching and guidance</li>
+          <li>Opportunity to be a part of a vibrant scholarship community</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h3 class="text-center mb-4">Frequently Asked Questions</h3>
+    <div class="row">
+      <div class="col-md-6">
+        <h5>What is the application deadline?</h5>
+        <p>The deadline for all scholarship applications is May 31st every year. Late submissions will not be accepted.</p>
+      </div>
+      <div class="col-md-6">
+        <h5>Can I apply for multiple scholarships?</h5>
+        <p>Yes, you can apply for as many scholarships as you qualify for. However, you must meet the eligibility requirements for each.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="py-5 text-center bg-success text-white">
+  <div class="container">
+    <h3>Need Assistance?</h3>
+    <p>If you have any questions or need help with your application, feel free to reach out to us!</p>
+    <a href="{% url 'contact' %}" class="btn btn-light">Contact Us</a>
+  </div>
+</section>
+
+{% endblock %}

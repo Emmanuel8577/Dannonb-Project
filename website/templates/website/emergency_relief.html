@@ -1,0 +1,196 @@
+{% extends "base.html" %} {% load static %} {% block title %}Emergency Relief |
+DANNONMBI CARE FOUNDATION{% endblock %} {% block content %}
+<!-- Hero Section with Background Image from Static Files -->
+<section
+  class="bg-success text-white text-center py-5"
+  style="
+    background-image: url('{% static 'images/image8.jpg' %}');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    position: relative;
+  "
+>
+  <div
+    class="container"
+    style="
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    "
+  >
+    <h1 class="display-4 fw-bold">Emergency Relief</h1>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="row">
+      <!-- Left Section: Text -->
+      <div class="col-md-6">
+        <p class="lead">
+          Nigeria frequently experiences crises that necessitate emergency
+          relief interventions. These crises, ranging from natural disasters and
+          conflicts to public health emergencies, affect millions of lives and
+          underscore the urgent need for coordinated humanitarian efforts.
+          Emergency relief programs aim to provide immediate support to those in
+          need while fostering long-term recovery and resilience.
+        </p>
+      </div>
+
+      <!-- Right Section: Video -->
+      <div class="col-md-6">
+        <div class="ratio ratio-16x9">
+          <iframe
+            src="https://www.youtube.com/embed/example_video"
+            title="About Us Video"
+            frameborder="0"
+            allowfullscreen
+            style="border-radius: 20px"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h4 class="mt-2 h4">
+      <strong> Types of Crises in Nigeria </strong>
+
+      <!--  -->
+      <li class="mt-4 h5">
+        <strong> Natural Disasters: </strong>
+      </li>
+      <ul class="mt-3">
+        <li class="mt-3 lead">
+          Flooding: Annual floods, often caused by heavy rainfall, river
+          overflows, and poor urban drainage systems, lead to widespread
+          displacement, destruction of property, and loss of lives. States such
+          as Kogi, Anambra, and Bayelsa are frequently affected.
+        </li>
+        <li class="mt-3 lead">
+          Droughts and Desertification: Northern Nigeria, particularly the Sahel
+          region, is prone to prolonged droughts, which disrupt agriculture,
+          worsen food insecurity, and deplete water resources.
+        </li>
+      </ul>
+
+      <!--  -->
+      <li class="mt-4 h5">
+        <strong> Armed Conflicts and Insecurity: </strong>
+      </li>
+      <ul class="mt-3">
+        <li class="mt-3 lead">
+          Insurgency in the Northeast: Boko Haram and Islamic State West Africa
+          Province (ISWAP) insurgencies have displaced millions, creating one of
+          the world’s largest humanitarian crises. Entire communities are left
+          dependent on relief in IDP (Internally Displaced Persons) camps.
+        </li>
+        <li class="mt-3 lead">
+          Banditry in the Northwest: Violent attacks by armed groups have caused
+          mass displacement, disrupted farming, and strained local resources.
+        </li>
+        <li class="mt-3 lead">
+          Farmer-Herder Conflicts: In central and northern Nigeria, clashes over
+          land use between farmers and pastoralists have led to widespread
+          displacement, injuries, and fatalities.
+        </li>
+      </ul>
+
+      <!--  -->
+      <li class="mt-3 h5">
+        <strong> Public Health Emergencies: </strong>
+      </li>
+      <ul class="mt-3">
+        <li class="mt-3 lead">
+          Disease Outbreaks: Cholera, Lassa fever, meningitis, and malaria
+          outbreaks are recurring public health emergencies. Poor sanitation and
+          limited access to clean water exacerbate these crises.
+        </li>
+        <li class="mt-3 lead">
+          Pandemics: The COVID-19 pandemic exposed the weaknesses of Nigeria's
+          healthcare system, highlighting the importance of emergency
+          preparedness and response mechanisms.
+        </li>
+      </ul>
+
+      <!--  -->
+      <li class="mt-3 h5">
+        <strong> Economic and Food Crises: </strong>
+      </li>
+      <ul class="mt-3">
+        <li class="mt-3 lead">
+          Rising inflation, unemployment, and disruptions to agriculture due to
+          conflict and climate change have deepened food insecurity. Many
+          households struggle to meet basic needs, especially in regions like
+          the Northeast and Northwest.
+        </li>
+      </ul>
+
+      <!--  -->
+      <li class="mt-3 h5">
+        <strong> Technological and Industrial Disasters: </strong>
+      </li>
+      <ul class="mt-3">
+        <li class="mt-3 lead">
+          Oil Spills: Frequent oil spills in the Niger Delta due to pipeline
+          vandalism and operational failures have devastated livelihoods and
+          ecosystems.
+        </li>
+        <li class="mt-3 lead">
+          Building Collapses: Rapid urbanization, poor regulation, and
+          substandard construction materials have led to frequent building
+          collapses, causing casualties and displacement.
+        </li>
+      </ul>
+    </h4>
+  </div>
+</section>
+
+
+
+<section>
+  <div class="container">
+
+  <h4 class="mt-5 h4">
+    <strong>
+      Goals of Emergency Relief
+    </strong>
+  </h4>
+
+  <p class="lead">
+    The overarching goals of emergency relief in Nigeria are to:
+
+  </p>
+
+  <ul class="mt-3">
+    <li class="mt-3 lead">
+      Save Lives: Address the immediate needs of affected populations, including food, water, shelter, and medical care.
+    </li>
+    <li class="mt-3 lead">
+      Alleviate Suffering: Provide psychosocial support and protect vulnerable groups such as children, women, and the elderly.
+    </li>
+    <li class="mt-3 lead">
+      Support Recovery: Help communities rebuild and restore livelihoods while reducing vulnerability to future crises.
+    </li>
+
+  </ul>
+
+  <p class="lead mt-5 mb-5">
+    Emergency relief is critical to addressing the immediate needs of individuals and communities during crises in Nigeria. By strengthening preparedness and investing in long-term solutions, Nigeria can reduce the impact of future disasters and build a more resilient society.
+  </p>
+
+</div>
+
+
+
+
+
+
+</section>
+
+{% endblock %}

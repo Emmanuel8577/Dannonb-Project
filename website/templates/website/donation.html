@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block title %}Donate | DANNONMBI CARE FOUNDATION{% endblock %}
+{% block content %}
+
+<section
+  class="bg-success text-white text-center py-5"
+  style="background-image: url('{% static 'images/image9.jpg' %}'); background-size: cover; background-position: center; height: 70vh; position: relative;">
+  <div class="container" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); text-align: center;">
+    <h1 class="display-4 fw-bold">Donation</h1>
+  </div>
+</section>
+
+
+
+
+<div class="container py-5">
+    <h2 class="text-center mb-4">Support Our Work</h2>
+    <p class="text-center">Thank you for your interest in the work of the Foundation. If you wish to support the work of the Foundation</p>
+    <p class="text-center">please complete the form below and we will get back to you</p>
+    
+    <form method="post">
+        {% csrf_token %}
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label for="first_name" class="form-label">First Name *</label>
+                <input type="text" name="first_name" id="first_name" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+                <label for="last_name" class="form-label">Last Name *</label>
+                <input type="text" name="last_name" id="last_name" class="form-control" required>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label for="email" class="form-label">Email Address *</label>
+                <input type="email" name="email" id="email" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+                <label for="phone_number" class="form-label">Phone Number *</label>
+                <input type="text" name="phone_number" id="phone_number" class="form-control" required>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label for="organization" class="form-label">Your Organization</label>
+                <input type="text" name="organization" id="organization" class="form-control">
+            </div>
+            <div class="col-md-6">
+                <label for="partnership_category" class="form-label">Partnership Category *</label>
+                <select name="partnership_category" id="partnership_category" class="form-select" required>
+                    <option value="Network Partner">Network Partner</option>
+                    <option value="Donor">Donor</option>
+                    <option value="Volunteer">Volunteer</option>
+                </select>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">Message *</label>
+            <textarea name="message" id="message" class="form-control" rows="4" required></textarea>
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

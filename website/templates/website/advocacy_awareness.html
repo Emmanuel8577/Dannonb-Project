@@ -1,0 +1,140 @@
+{% extends "base.html" %} {% load static %} {% block title %}Advocacy Awareness
+| DANNONMBI CARE FOUNDATION{% endblock %} {% block content %}
+<!-- Hero Section with Background Image from Static Files -->
+<section
+  class="bg-success text-white text-center py-5"
+  style="
+    background-image: url('{% static 'images/image11.jpg' %}');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    position: relative;
+  "
+>
+  <div
+    class="container"
+    style="
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    "
+  >
+    <h1 class="display-4 fw-bold">Advocacy Awareness</h1>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="row">
+      <!-- Left Section: Text -->
+      <div class="col-md-6">
+        <p class="lead mt-1">
+          Advocacy and awareness initiatives play a pivotal role in addressing
+          societal challenges, driving policy reforms, and fostering social
+          transformation. In Nigeria, where many pressing issues such as
+          poverty, gender inequality, health crises, and environmental
+          degradation persist, raising awareness and advocating for change is
+          crucial. These efforts engage communities, amplify marginalized
+          voices, and inspire collective action toward creating a just and
+          equitable society.
+        </p>
+      </div>
+
+      <!-- Right Section: Video -->
+      <div class="col-md-6">
+        <div class="ratio ratio-16x9">
+          <iframe
+            src="https://www.youtube.com/embed/example_video"
+            title="About Us Video"
+            frameborder="0"
+            allowfullscreen
+            style="border-radius: 20px"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <div>
+      <h4 class=" h4">
+        <strong> Importance of Advocacy and Awareness </strong>
+      </h4>
+
+      <!--  -->
+      <li class="mt-3 h5">
+        <strong> Amplifying Marginalized Voices: </strong>
+      </li>
+      <ul class="mt-3">
+        <li class="mt-3 lead">
+          Advocacy provides a platform for underrepresented groups, including
+          women, children, persons with disabilities, and rural communities, to
+          share their concerns and demands.
+        </li>
+      </ul>
+
+      <!--  -->
+      <li class="mt-3 h5">
+        <strong> Promoting Policy Change: </strong>
+      </li>
+      <ul class="mt-3">
+        <li class="mt-3 lead">
+          Raising awareness about critical issues influences policymakers to
+          enact reforms that align with the needs of the population.
+        </li>
+      </ul>
+
+      <!--  -->
+      <!--  -->
+      <li class="mt-3 h5">
+        <strong> Educating the Public: </strong>
+      </li>
+      <ul class="mt-3">
+        <li class="mt-3 lead">
+          Awareness campaigns empower individuals with knowledge about their
+          rights, responsibilities, and available resources, enabling them to
+          make informed decisions.
+        </li>
+      </ul>
+
+      <!--  -->
+      <li class="mt-3 h5">
+        <strong> Driving Behavioral Change: </strong>
+      </li>
+      <ul class="mt-3">
+        <li class="mt-3 lead">
+          Advocacy efforts challenge harmful cultural practices, stereotypes,
+          and stigmas, fostering progressive attitudes and behaviors within
+          communities.
+        </li>
+      </ul>
+
+      <li class="mt-3 h5">
+        <strong> Building Social Movements: </strong>
+      </li>
+      <ul class="mt-3">
+        <li class="mt-3 lead">
+          Collective advocacy mobilizes communities and stakeholders to work
+          together toward common goals, increasing the impact of social
+          interventions.
+        </li>
+      </ul>
+
+      <p class="mt-5 lead">
+        Advocacy and awareness are powerful tools for initiating social change
+        and driving development. By empowering individuals with knowledge,
+        amplifying marginalized voices, and mobilizing collective action, these
+        efforts lay the foundation for a more equitable and sustainable future.
+        To maximize impact, advocacy campaigns must be inclusive, well-funded,
+        and strategically implemented in collaboration with communities and
+        stakeholders.
+      </p>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

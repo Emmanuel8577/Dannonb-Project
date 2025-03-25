@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Contact Us | DANNONMBI CARE FOUNDATION{% endblock %}
+
+{% block content %}
+
+<section
+  class="bg-success text-white text-center py-5"
+  style="background-image: url('{% static 'images/image4.jpg' %}'); background-size: cover; background-position: center; height: 70vh; position: relative;">
+  <div class="container" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); text-align: center;">
+    <h1 class="display-4 fw-bold">Contact Us</h1>
+  </div>
+</section>
+
+
+<div class="container py-5">
+    <p class="text-center">We’d love to hear from you. Please fill out the form below to reach us.</p>
+
+    <form method="post">
+        {% csrf_token %}
+        
+        <!-- Bootstrap grid system for responsive layout -->
+        <div class="row justify-content-center">
+            <!-- Each form field takes 6 columns on medium and large screens (col-md-6) and 12 on small screens (col-12) -->
+            <div class="col-md-6 col-12 mb-3">
+                <label for="id_name" class="form-label">Name</label>
+                {{ form.name }}
+            </div>
+            <div class="col-md-6 col-12 mb-3">
+                <label for="id_email" class="form-label">Email</label>
+                {{ form.email }}
+            </div>
+            <div class="col-md-6 col-12 mb-3">
+                <label for="id_phone" class="form-label">Phone</label>
+                {{ form.phone }}
+            </div>
+            <div class="col-md-6 col-12 mb-3">
+                <label for="id_message" class="form-label">Message</label>
+                {{ form.message }}
+            </div>
+        </div>
+        
+        <div class="text-center">
+            <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

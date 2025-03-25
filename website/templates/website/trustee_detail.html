@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ trustee.name }} | Board of Trustees{% endblock %}
+
+{% block content %}
+<section class="bg-success text-white text-center py-5">
+    <div class="container">
+        <h1 class="display-4 fw-bold">{{ trustee.name }}</h1>
+        {% if trustee.position %}
+            <p class="lead">{{ trustee.position }}</p>
+        {% endif %}
+    </div>
+</section>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4 text-center">
+            {% if trustee.picture %}
+                <img src="{{ trustee.picture.url }}" class="rounded img-fluid mb-5" alt="{{ trustee.name }}">
+            {% else %}
+                <i class="fas fa-user-circle mb-5" style="font-size: 150px; color: #ccc;"></i>
+            {% endif %}
+        </div>
+        <div class="col-md-8">
+            <h2>About {{ trustee.name }}</h2>
+            {% if trustee.bio %}
+                <p >{{ trustee.bio|safe }}</p>
+            {% else %}
+                <p>No bio available.</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

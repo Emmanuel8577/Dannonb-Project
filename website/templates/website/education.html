@@ -1,0 +1,136 @@
+{% extends "base.html" %} {% load static %} {% block title %}Education |
+DANNONMBI CARE FOUNDATION{% endblock %} {% block content %}
+<!-- Hero Section with Background Image from Static Files -->
+<section class="bg-success text-white text-center py-5" style="
+    background-image: url('{% static 'images/image9.jpg' %}');
+    background-size: cover;
+    background-position: center;
+    height: 70vh; /* Default height for medium and larger screens */
+    position: relative; /* Ensures the container can be positioned at the bottom */
+  ">
+  <div class="container"
+    style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); text-align: center;">
+    <h1 class="display-4 fw-bold">Education</h1>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="row">
+      <!-- Left Section: Text -->
+      <div class="col-md-6">
+        <p class="lead">
+          Education is a cornerstone for national development, yet Nigeria
+          continues to face challenges in providing equitable access to quality
+          education. Millions of children are out of school, and the system
+          struggles with issues such as inadequate infrastructure, teacher
+          shortages, and poor learning outcomes. Addressing these challenges
+          through targeted interventions is key to unlocking the potential of
+          Nigeria’s youthful population.
+        </p>
+      </div>
+
+      <!-- Right Section: Video -->
+      <div class="col-md-6">
+        <div class="ratio ratio-16x9">
+          <iframe
+            src="https://www.youtube.com/embed/example_video"
+            title="About Us Video"
+            frameborder="0"
+            allowfullscreen
+            style="border-radius: 20px"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section >
+  <div class="container" >
+    <h4 class="mt-5 h4">
+      <strong> The State of Education in Nigeria </strong>
+    </h4>
+
+    <!--  -->
+    <li class="mt-3 h5">
+      <strong> Out-of-School Children: </strong>
+    </li>
+    <ul class="mt-3">
+      <li class="mt-3 lead">
+        According to UNICEF, Nigeria has the highest number of out-of-school
+        children globally, with over 10 million children aged 5–14 not attending
+        school. This issue is more pronounced in northern Nigeria, where
+        cultural and economic factors contribute to low enrollment rates.
+      </li>
+      <li class="mt-3 lead">
+        Girls are particularly affected, facing barriers such as early marriage,
+        child labor, and gender discrimination.
+      </li>
+    </ul>
+
+    <!--  -->
+    <li class="mt-3 h5">
+      <strong> Access to Education: </strong>
+    </li>
+    <ul class="mt-3">
+      <li class="mt-3 lead">
+        While primary school enrollment has improved over the years, many
+        children do not transition to secondary or tertiary education due to
+        financial constraints, long distances to schools, and inadequate
+        facilities.
+      </li>
+    </ul>
+    <!--  -->
+    <li class="mt-3 h5">
+      <strong> Quality of Education: </strong>
+    </li>
+    <ul class="mt-3">
+      <li class="mt-3 lead">
+        Learning outcomes remain low, with many children unable to read or
+        perform basic arithmetic despite attending school.
+      </li>
+      <li class="mt-3 lead">
+        Teacher quality is a major issue, as many educators lack the proper
+        training, and teacher-student ratios are often overwhelming, especially
+        in public schools.
+      </li>
+    </ul>
+
+    <li class="mt-3 h5">
+      <strong> Infrastructure Deficits: </strong>
+    </li>
+    <ul class="mt-3">
+      <li class="mt-3 lead">
+        Many schools lack essential facilities such as classrooms, desks,
+        toilets, and electricity, especially in rural areas.
+      </li>
+      <li class="mt-3 lead">
+        Overcrowding is a persistent issue, with some schools accommodating far
+        more students than their capacity.
+      </li>
+    </ul>
+
+    <li class="mt-3 h5">
+      <strong> Impact of Conflicts and Emergencies: </strong>
+    </li>
+    <ul class="mt-3">
+      <li class="mt-3 lead">
+        Armed conflicts, especially in the Northeast, have disrupted education
+        for millions. Schools have been destroyed, and many children are too
+        afraid to return to classrooms.
+      </li>
+      <li class="mt-3 lead">
+        Internally Displaced Persons (IDP) camps struggle to provide adequate
+        educational services for displaced children.
+      </li>
+    </ul>
+
+    <p class="mt-5 lead mb-5">
+      Education is a powerful tool for transforming lives and communities. By addressing access, quality, and equity issues, Nigeria can ensure that every child has the opportunity to learn, grow, and contribute meaningfully to society. A collaborative approach involving government, Dannonmbi, and local communities is essential to achieving this vision
+    </p>
+  </div>
+</section>
+
+{% endblock %}

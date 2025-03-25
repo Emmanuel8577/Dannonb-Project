@@ -1,0 +1,91 @@
+<!-- event_list.html -->
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}Events | DANNONMBI CARE FOUNDATION{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="bg-success text-white text-center py-5" style="background-image: url('{% static 'images/image15.jpg' %}'); background-size: cover; background-position: center; height: 70vh; position: relative;">
+    <div class="container" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); text-align: center;">
+      <h1 class="display-4 fw-bold">Events</h1>
+    </div>
+  </section>
+  
+<div class="container py-5">
+    <h1 class="text-center">Upcoming Events</h1>
+
+    <!-- Upcoming Events -->
+    <div class="event-list">
+        {% for event in upcoming_page %}
+        <div class="event-item">
+            <h3>{{ event.name }}</h3>
+            <p><strong>Date:</strong> {{ event.date|date:"F j, Y, H:i" }}</p>
+            <p>{{ event.description }}</p>
+            <p><strong>Location:</strong> {{ event.location }}</p>
+
+            {% if event.image %}
+                <img src="{{ event.image.url }}" alt="{{ event.name }}" class="event-image" />
+            {% endif %}
+        </div>
+        {% empty %}
+        <p>No upcoming events.</p>
+        {% endfor %}
+    </div>
+
+    <!-- Pagination for Upcoming Events -->
+    <div class="pagination">
+        <span class="page-item">
+            {% if upcoming_page.has_previous %}
+            <a class="page-link" href="?page_upcoming={{ upcoming_page.previous_page_number }}">Previous</a>
+            {% endif %}
+        </span>
+
+        <span class="page-item">
+            {% if upcoming_page.has_next %}
+            <a class="page-link" href="?page_upcoming={{ upcoming_page.next_page_number }}">Next</a>
+            {% endif %}
+        </span>
+    </div>
+
+    <hr>
+
+    <h1 class="text-center">Past Events</h1>
+
+    <!-- Past Events -->
+    <div class="event-list">
+        {% for event in past_page %}
+        <div class="event-item">
+            <h3>{{ event.name }}</h3>
+            <p><strong>Date:</strong> {{ event.date|date:"F j, Y, H:i" }}</p>
+            <p>{{ event.description }}</p>
+            <p><strong>Location:</strong> {{ event.location }}</p>
+
+            {% if event.image %}
+                <img src="{{ event.image.url }}" alt="{{ event.name }}" class="event-image" />
+            {% endif %}
+        </div>
+        {% empty %}
+        <p>No past events.</p>
+        {% endfor %}
+    </div>
+
+    <!-- Pagination for Past Events -->
+    <div class="pagination">
+        <span class="page-item">
+            {% if past_page.has_previous %}
+            <a class="page-link" href="?page_past={{ past_page.previous_page_number }}">Previous</a>
+            {% endif %}
+        </span>
+
+        <span class="page-item">
+            {% if past_page.has_next %}
+            <a class="page-link" href="?page_past={{ past_page.next_page_number }}">Next</a>
+            {% endif %}
+        </span>
+    </div>
+
+</div>
+{% endblock %}
