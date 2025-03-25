@@ -1,0 +1,385 @@
+/* General styles */
+body {
+    font-family: 'ABeeZee', sans-serif;
+}
+
+/* Navbar styles */
+.navbar {
+    position: sticky;
+    top: 0;
+        z-index: 1000;
+        background-color: transparent;
+        color: black;
+        padding: 30px;
+        /* Initial padding */
+        transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease;
+        box-shadow: none;
+    }
+
+.navbar.scrolled {
+    /* nav green */
+    background-color: #28a745;
+        color: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        /* Reduced padding */
+        transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease;
+    }
+
+.navbar .nav-link,
+.navbar .dropdown-toggle {
+    color: black !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar.scrolled .nav-link,
+.navbar.scrolled .dropdown-toggle {
+
+    color: white !important;
+    }
+    
+    /* Navbar buttons */
+    .navbar .btn-outline-primary {
+        border-color: black;
+        color: black;
+        transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+    }
+    
+    .navbar.scrolled .btn-outline-primary {
+        border-color: white;
+        color: white;
+    }
+    
+    .navbar .btn-outline-primary:hover {
+        background-color: #218838;
+        color: white !important;
+        border-color: #218838;
+    }
+    
+    /* Navbar logo text */
+    .logo-text {
+        color: black;
+        font-size: 1.5rem;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+    
+    .navbar.scrolled .logo-text {
+        color: white;
+    }
+    
+    /* Navbar logo image */
+    .logo-section img {
+    max-width: 200px;
+        max-height: 200px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        transform: scale(1);
+        /* Default size */
+}
+
+.navbar.scrolled .logo-section img {
+    transform: scale(0.8);
+    /* Scale down when scrolled */
+    opacity: 0.9;
+}
+
+/* Hamburger menu (for mobile view) */
+.navbar-toggler {
+    background-color: lightGrey;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled .navbar-toggler {
+    background-color: white;
+}
+
+/* Carousel */
+.carousel-item {
+    height: 500px;
+    overflow: hidden;
+}
+
+.carousel-image {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-caption h1 {
+    color: rgb(42, 227, 42);
+}
+
+/* Hero text shadow */
+.hero-text {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Card Styles */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Latest News Section */
+#latest-news .card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#latest-news .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+#latest-news .card-body {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#latest-news .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+#latest-news .btn-primary {
+    margin-top: auto;
+}
+
+/* Rounded corners for buttons */
+.btn-primary {
+    border-radius: 5px;
+    background-color: white !important;
+    border-color: #28a745 !important;
+    color: #218838 !important;
+}
+
+.btn-primary:hover {
+    background-color: rgba(255, 255, 255, 0.74) !important;
+    border-color: #218838 !important;
+    color: #218838 !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: #28a745 !important;
+    color: white !important;
+    border-radius: 5px;
+}
+
+/* Video frame */
+.video-frame {
+    border-radius: 10px;
+}
+
+/* Avatar container */
+.avatar-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.avatar-icon {
+    font-size: 140px;
+    color: #ccc;
+}
+
+/* Responsive carousel controls */
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: darkgreen;
+    border-radius: 50%;
+    color: white;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+}
+
+.carousel-control-prev {
+    left: 10px;
+}
+
+.carousel-control-next {
+    right: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: darkgreen;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+
+    .carousel-control-prev,
+    .carousel-control-next {
+            display: none;
+        }
+    }
+
+/* General carousel text styles */
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.carousel-caption h1,
+.carousel-caption h2 {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.carousel-caption p {
+    color: white;
+    font-size: 1rem;
+}
+
+@media (max-width: 576px) {
+    .carousel-caption h1 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+
+    .carousel-caption {
+        padding: 10px;
+
+        /* Adjust the logo size by default */
+        .logo-section img {
+            max-width: 200px;
+                max-height: 200px;
+            
+                transition: transform 0.3s ease, opacity 0.3s ease;
+                transform: scale(1);
+                /* Default size */
+            }
+            
+            /* Scale down the logo when scrolled */
+            .logo-section img.scrolled {
+                transform: scale(0.8);
+                /* Adjust scale value as needed */
+                opacity: 0.8;
+                /* Slight fade-out effect */
+            }
+            
+            /* Navbar transition to make it responsive to scroll */
+            .navbar.scrolled {
+                background-color: #28a745;
+                color: white;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s ease;
+            }
+            }
+            
+            .navbar.scrolled .nav-link,
+            .navbar.scrolled .btn-outline-primary {
+                color: white !important;
+            }
+            }
+.top-bar {
+    background-color: #155724;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.top-bar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.top-bar a:hover {
+    text-decoration: underline;
+}
+
+
+/* Navbar Styling */
+.navbar {
+    background-color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+}
+
+.navbar-brand img {
+    max-height: 50px;
+}
+
+.nav-link {
+    color: #155724;
+    font-size: 0.9rem;
+    padding: 0.5rem 0;
+}
+
+.nav-link:hover {
+    color: #0a4c1f;
+}
+
+
+
+/* Nav Links Styling */
+.nav-link {
+    padding: 0.5rem 0;
+    /* Adjust padding */
+    font-size: 0.9rem;
+    color: #155724;
+}
+
+/* Change the highlight color of the dropdown item on hover */
+.navbar .dropdown-menu .dropdown-item:hover,
+.navbar .dropdown-menu .dropdown-item:focus {
+    background-color: #28a745;
+    /* Green background when hovered or focused */
+    color: white;
+    /* Ensure the text color is white for readability */
+}
+
+/* Change the highlight color of the dropdown item when it's tapped (active) */
+.navbar .dropdown-menu .dropdown-item:active {
+    background-color: #28a745;
+    /* Green background when item is clicked/tapped */
+    color: white;
+    /* Text color */
+}
